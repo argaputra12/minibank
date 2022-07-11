@@ -20,7 +20,7 @@
             </div>
 
             <!-- Username -->
-            <div>
+            <div class="mt-4">
                 <x-label for="name" :value="__('Username')" />
 
                 <x-input id="name" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
@@ -52,7 +52,7 @@
                                 name="password_confirmation" required />
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex items-center justify-end mt-8">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
                 </a>
