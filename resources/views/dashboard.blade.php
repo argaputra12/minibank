@@ -9,7 +9,23 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    You're logged in!
+                    @if(Auth::user()->role == 'admin')
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                    {{ __('Admin Dashboard') }}
+                                </h3>
+                            </div>
+                        </div>
+                    @elseif(Auth::user()->role == 'user')
+                        <div class="flex items-center justify-between">
+                            <div class="flex-1">
+                                <h3 class="text-lg leading-6 font-medium text-gray-900">
+                                    {{ __('User Dashboard') }}
+                                </h3>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
